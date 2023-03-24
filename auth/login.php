@@ -5,7 +5,7 @@
     require_once('../config/db_connection.php');
 
     //prende i valori dal form e li assegna alle variabili
-    $username=sanitize_string($_POST['username']); // sanitize
+    $username=sanitize_string($_POST['username']); //sanitizzazione dello username
     $password=$_POST['password'];
 
     $prpstm=$conn->prepare("SELECT id, password FROM accounts WHERE email LIKE ? OR username LIKE ?");
