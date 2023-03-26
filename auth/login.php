@@ -16,11 +16,11 @@
         bad();
     }
 
-    $prpstm->bind_result($id, $passworddb);
+    $prpstm->bind_result($id, $password_hashed);
     $prpstm->fetch();
 
     //se l'hash della password corrisponde
-    if(!password_verify($password, $passworddb)) {
+    if(!password_verify($password, $password_hashed)) {
         bad();
     }
 
