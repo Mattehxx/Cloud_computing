@@ -18,8 +18,8 @@ $(document).ready(function() {
             success: (data)=> {
                 console.log(data); 
             },
-            error: ()=> {
-                console.log('ERROR');
+            error: (data)=> {
+                console.log(data);
             }
         })
     });
