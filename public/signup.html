@@ -25,14 +25,14 @@
                             <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Registration form</h5>
 
                             <!-- FORM -->
-                            <form action="../auth/signup.php" method="post">
+                            <form action="#" id="form">
 
                                 <div class="row">
                                     <!-- Username -->
                                     <div class="col-md-6 mb-4 pb-2">
                                         <div class="form-outline">
                                             <label class="form-label" for="username">Username</label>
-                                            <input type="text" id="username" class="form-control form-control-lg" minlength="4" maxlength="30" required/>
+                                            <input type="text" name="username" id="username" class="form-control form-control-lg" minlength="4" maxlength="30" required/>
                                             <p class="small text-muted">(Minimum 4 characters, maximum 8 characters)</p>
                                         </div>
                                     </div>
@@ -41,7 +41,7 @@
                                     <div class="col-md-6 mb-4 pb-2">
                                         <div class="form-outline">
                                             <label class="form-label" for="password">Password</label>
-                                            <input type="password" id="password" class="form-control form-control-lg" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required/>
+                                            <input type="password" name="password" id="password" class="form-control form-control-lg" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required/>
                                             <p class="small text-muted">(Minimum 8 characters, at least 1 uppercase letter, 1 lowercase letter, 1 number and 1 special character)</p>
                                         </div>
                                     </div>
@@ -51,16 +51,16 @@
                                     <!-- First name -->
                                     <div class="col-md-6 mb-4">
                                         <div class="form-outline">
-                                            <label class="form-label" for="firstName">First Name</label>
-                                            <input type="text" id="firstName" class="form-control form-control-lg" minlength="1" maxlength="50" required/>
+                                            <label class="form-label" for="first_name">First Name</label>
+                                            <input type="text" name="first_name" id="first_name" class="form-control form-control-lg" minlength="1" maxlength="50" required/>
                                         </div>
                                     </div>
 
                                     <!-- Last name -->
                                     <div class="col-md-6 mb-4">
                                         <div class="form-outline">
-                                            <label class="form-label" for="lastName">Last Name</label>
-                                            <input type="text" id="lastName" class="form-control form-control-lg" minlength="1" maxlength="50" required/>
+                                            <label class="form-label" for="last_name">Last Name</label>
+                                            <input type="text" name="last_name" id="last_name" class="form-control form-control-lg" minlength="1" maxlength="50" required/>
                                         </div>
                                     </div>
                                 </div>
@@ -69,8 +69,8 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-4 d-flex align-items-center">
                                         <div class="form-outline datepicker w-100">
-                                            <label for="birthdayDate" class="form-label">Birthday</label>
-                                            <input type="date" class="form-control form-control-lg" id="birthdayDate" min="1900-01-01" required/>
+                                            <label for="birthday_date" class="form-label">Birthday</label>
+                                            <input type="date" name="birthday_date" id="birthday_date" class="form-control form-control-lg" min="1900-01-01" required/>
                                         </div>
                                     </div>
 
@@ -78,17 +78,17 @@
                                     <div class="col-md-6 mb-4">
                                         <h6 class="mb-2 pb-1">Gender: </h6>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender" value="1" checked/>
+                                            <input class="form-check-input" type="radio" name="gender" id="maleGender" value="1" checked/>
                                             <label class="form-check-label" for="maleGender">Male</label>
                                         </div>
                     
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender" value="2"/>
+                                            <input class="form-check-input" type="radio" name="gender" id="femaleGender" value="2"/>
                                             <label class="form-check-label" for="femaleGender">Female</label>
                                         </div>
                     
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender" value="3"/>
+                                            <input class="form-check-input" type="radio" name="gender" id="otherGender" value="3"/>
                                             <label class="form-check-label" for="otherGender">Other</label>
                                         </div>
                                     </div>
@@ -96,7 +96,7 @@
                 
                                 <div class="row">
                                     <div class="mt-4 pt-2 col-md-6 mb-4">
-                                        <button class="btn btn-dark btn-lg btn-block" type="submit" style="background-color: #99d2e0; border-color: #99d2e0; color: black;">Sign up</button>
+                                        <button id="sumbit_button" class="btn btn-dark btn-lg btn-block" type="submit" style="background-color: #99d2e0; border-color: #99d2e0; color: black;">Sign up</button>
                                     </div>
                                     <div class="mt-4 pt-2 col-md-6 mb-4" style="text-align: center;">
                                         <p class="pb-lg-2" style="color: #393f81;">Already have an account? <a href="login.html" style="color: #393f81;">Login here</a></p>
@@ -117,5 +117,6 @@
 
     <!-- JS file -->
     <script src="../js/max_date.js"></script>
+    <script src="../js/auth/signup.js"></script>
 </body>
 </html>

@@ -9,8 +9,8 @@
     $username=sanitize_string($_POST['username']); //sanitizzazione dello username
     $password=$_POST['password'];
 
-    $prpstm=$conn->prepare("SELECT id, password FROM accounts WHERE email LIKE ? OR username LIKE ?");
-    $prpstm->bind_param('ss', $username, $username);
+    $prpstm=$conn->prepare("SELECT id, password FROM accounts WHERE username LIKE ?");
+    $prpstm->bind_param('s', $username);
 
     if (!$prpstm->execute()) {
         bad();
@@ -30,6 +30,6 @@
     }
 
     //se tutto va bene e le credenziali corrispondono
-    $_SESSION['idUser']=$id;
+    $_SESSION['id_user']=$id;
     ok();
 ?>

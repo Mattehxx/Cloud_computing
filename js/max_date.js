@@ -13,5 +13,5 @@ $(document).ready(()=> {
     } 
         
     today=yyyy+'-'+mm+'-'+dd;
-    document.getElementById("birthdayDate").setAttribute("max", today);
+    document.getElementById("birthday_date").setAttribute("max", today);
 });
