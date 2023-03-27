@@ -22,6 +22,6 @@
         bad();
     }
 
-    //se tutte le operazione vanno a buon fine
+    //se tutte le operazioni vanno a buon fine
     ok();
 ?>
