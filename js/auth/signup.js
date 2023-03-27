@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('form').submit(()=> {
+    $('#sumbit_button').click(()=> {
         
         var formData = {
             username:$('#username').val(),
@@ -18,15 +18,14 @@ $(document).ready(function() {
 
             success: (data)=> {
                 console.log(data);
-                alert('Success');
+                let success_alert=$('<div class="alert alert-success" role="alert"></div>').text('Account added successfully. Click the link above to login!');
+                $('#alert_row').append(success_alert);
                 //window.location.replace('login.html');
             },
             error: (data)=> {
                 console.log(data);
-                alert('Failed');
-            },
-            complete: ()=> {
-                alert('Completed');
+                let error_alert=$('<div class="alert alert-danger" role="alert"></div>').text('Registration request failed. Try again!');
+                $('#alert_row').append(error_alert);
             }
         });
     });
