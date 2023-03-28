@@ -1,23 +1,40 @@
 /* 
-* @option:int 
+* @id_input_date:string | id dell'input type date di cui si vuole limitare la data
+*
+* @option:int | opzione per definire min o max
+* -2 min + @years
 * -1 min
 * 1 max
-* 2 min @years
+* 2 max - @years
 *
 * @years:int | age min to have
 */
 function limit_date(id_input_date, option, years) {
-    let attr=0;
-    if (option==1) attr='max';
-    else if (option==-1) attr='min';
-    else if (option==2) attr='max';
-
     var today=new Date();
     var dd=today.getDate();
     var mm=today.getMonth()+1;
-    //se è specificato @years lo sottraggo all'anno corrente
-    if (years!=null) var yyyy=today.getFullYear()-years;
-    else var yyyy=today.getFullYear();
+    var yyyy=today.getFullYear();
+
+    //se è specificato @years lo imposto a 0
+    if (years==null) years=0;
+
+    let attr='';
+    switch (option) {
+        case -2:
+            attr='min';
+            yyyy+=years;
+            break;
+        case -1:
+            attr='min';
+            break;
+        case 1:
+            attr='max';
+            break;
+        case 2:
+            attr='max';
+            yyyy-=years;
+            break;
+    }
 
     if (dd<10) {
         dd='0'+dd;
