@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    limit_date('birthday_date', 1);
+    
     $('#sumbit_button').click(()=> {
         
         var formData = {
