@@ -16,7 +16,7 @@ $(document).ready(function() {
 
             success: (data)=> {
                 console.log(data);
-                window.location.replace('home.html');
+                window.location.replace('home.php');
             },
             error: (data)=> {
                 console.log(data);
