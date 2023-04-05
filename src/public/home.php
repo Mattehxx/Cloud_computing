@@ -98,14 +98,14 @@
             <div class="col-4">
                 <div class="card text-center" style="max-width: 700px;">
                     <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                        <img src="../img/rendered-min-768x576-min-1.jpg" class="img-fluid rounded-1"/>
+                        <img src="../img/docker_2.png" class="img-fluid rounded-1"/>
                         <a href="#!">
                             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                         </a>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">AWS</h5>
-                        <p class="card-text">Descrizione degli AWS</p>
+                        <h5 class="card-title">Docker</h5>
+                        <p class="card-text">Descrizione di docker</p>
                     </div>
                 </div>
             </div>
@@ -115,28 +115,28 @@
             <div class="col-4">
                 <div class="card text-center" style="max-width: 700px;">
                     <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                        <img src="../img/rendered-min-768x576-min-1.jpg" class="img-fluid rounded-1"/>
+                        <img src="../img/jquery.png" class="img-fluid rounded-1"/>
                         <a href="#!">
                             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                         </a>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">AWS</h5>
-                        <p class="card-text">Descrizione degli AWS</p>
+                        <h5 class="card-title">jQuery</h5>
+                        <p class="card-text">Descrizione di jQuery</p>
                     </div>
                 </div>
             </div>
             <div class="col-4">
                 <div class="card text-center" style="max-width: 700px;">
                     <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                        <img src="../img/rendered-min-768x576-min-1.jpg" class="img-fluid rounded-1"/>
+                        <img src="../img/bootstrap-social.png" class="img-fluid rounded-1"/>
                         <a href="#!">
                             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                         </a>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">AWS</h5>
-                        <p class="card-text">Descrizione degli AWS</p>
+                        <h5 class="card-title">Bootstrap</h5>
+                        <p class="card-text">Descrizione di Bootstrap</p>
                     </div>
                 </div>
             </div>
