@@ -12,8 +12,8 @@
     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <section class="vh-100" style="background-color: #99d2e0;">
-        <div class="container py-5 h-100">
+    <section style="background-color: #99d2e0;">
+        <div class="container py-5">
             <div class="row justify-content-center align-items-center h-100">
                 <div class="col-12 col-lg-9 col-xl-7">
                     <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
@@ -27,20 +27,20 @@
                             <!-- FORM -->
                             <div class="row">
                                 <!-- Username -->
-                                <div class="col-md-6 mb-4 pb-2">
+                                <div class="col-md-6 mb-1 pb-2">
                                     <div class="form-outline">
                                         <label class="form-label" for="username">Username</label>
                                         <input type="text" name="username" id="username" class="form-control form-control-lg" minlength="4" maxlength="30" required/>
-                                        <p class="small text-muted">(Minimum 4 characters, maximum 8 characters)</p>
+                                        <p class="small text-muted mb-1">(Minimum 4 characters, maximum 8 characters)</p>
                                     </div>
                                 </div>
 
                                 <!-- Password -->
-                                <div class="col-md-6 mb-4 pb-2">
+                                <div class="col-md-6 mb-1 pb-2">
                                     <div class="form-outline">
                                         <label class="form-label" for="password">Password</label>
                                         <input type="password" name="password" id="password" class="form-control form-control-lg" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required/>
-                                        <p class="small text-muted">(Minimum 8 characters, at least 1 uppercase letter, 1 lowercase letter, 1 number and 1 special character)</p>
+                                        <p class="small text-muted mb-1">(Minimum 8 characters, at least 1 uppercase letter, 1 lowercase letter, 1 number and 1 special character)</p>
                                     </div>
                                 </div>
                             </div>

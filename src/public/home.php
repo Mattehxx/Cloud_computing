@@ -1,3 +1,12 @@
+<?php
+  session_start();
+
+  require_once ('../functions/islogged.php');
+  require_once ('../functions/redirect.php');
+
+  if(!islogged()) redirect('login.html');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
