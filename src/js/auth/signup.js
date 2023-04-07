@@ -22,7 +22,6 @@ $(document).ready(function() {
                 console.log(data);
                 let success_alert=$('<div class="alert alert-success" role="alert"></div>').text('Account added successfully. Click the link above to login!');
                 $('#alert_row').append(success_alert);
-                //window.location.replace('login.html');
             },
             error: (data)=> {
                 console.log(data);

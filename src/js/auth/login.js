@@ -16,10 +16,12 @@ $(document).ready(function() {
 
             success: (data)=> {
                 console.log(data);
+                sessionStorage.setItem('islogged', 'TRUE');
                 window.location.replace('home.php');
             },
             error: (data)=> {
                 console.log(data);
+                sessionStorage.setItem('islogged', 'FALSE');
                 let error_alert=$('<div class="alert alert-danger" role="alert"></div>').text('Login failed. Try again or create a new profile!');
                 $('#alert_card').append(error_alert);
             }

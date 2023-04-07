@@ -1,7 +1,7 @@
 <?php
-    $hostname="localhost";
-    $username="lowuser";
-    $password="lowuser";
+    $hostname="18.204.198.161/db";
+    $username="user";
+    $password="password";
     $database="cloud_computing";
     $port="3306";
     // creo la connessione

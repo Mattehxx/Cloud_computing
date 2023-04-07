@@ -1,12 +1,3 @@
-<?php
-  session_start();
-
-  require_once ('../functions/islogged.php');
-  require_once ('../functions/redirect.php');
-
-  if(!islogged()) redirect('login.html');
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script> if(sessionStorage.getItem('islogged')=='FALSE') location.replace("login.html"); </script>
 </head>
 <body style="background-image: linear-gradient( 95.2deg, rgb(202, 248, 237) 26.8%, rgba(192,229,246,1) 64% );">
     <header id="header">
@@ -91,7 +83,7 @@
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">AWS</h5>
-                        <p class="card-text">Descrizione degli AWS</p>
+                        <p class="card-text">Ho utilizzato un servizio di hosting che mi permetta di</p>
                     </div>
                 </div>
             </div>

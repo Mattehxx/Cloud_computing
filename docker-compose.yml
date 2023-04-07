@@ -1,45 +1,41 @@
-version: "3.7"
-
+version: '3'
 services:
-  app:
-    build: .
-    ports:
-      - "80:80"
-
   db:
-    image: mysql:5.7
-    restart: always
+    image: mysql:latest
     environment:
-      MYSQL_DATABASE: 'db'
-      # So you don't have to use root, but you can if you like
-      MYSQL_USER: 'user'
-      # You can use whatever password you like
-      MYSQL_PASSWORD: 'password'
-      # Password for root access
-      MYSQL_ROOT_PASSWORD: 'password'
-    ports:
-      # <Port exposed> : <MySQL Port running inside container>
-      - '3306:3306'
-    expose:
-      # Opens port 3306 on the container
-      - '3306'
-      # Where our data will be persisted
+      MYSQL_DATABASE: cloud_computing
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
     volumes:
-      - my-db:/var/lib/mysql
-  # Names our volume
+      - "./db:/docker-entrypoint-initdb.d"
+    networks:
+      - cloud_computing
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    container_name: pma
-    links:
+    depends_on:
       - db
-    environment:
-      PMA_HOST: db
-      PMA_PORT: 3306
-      PMA_ARBITRARY: 1
-    restart: always
+    image: phpmyadmin/phpmyadmin
     ports:
-      - 8081:80
-volumes:
-  dbdata:
-  my-db:
+      - 8080:80
+    environment:
+      - PMA_HOST=db
+      - PMA_PORT=3306
+    networks:
+      - cloud_computing
+
+  www:
+    depends_on:
+      - db
+    image: php:8.1.1-apache
+    volumes:
+      - "./:/var/www/html"
+    ports:
+     - 80:80
+     - 443:443
+    networks:
+      - cloud_computing
+
+networks:
+  cloud_computing:
+    driver: bridge
