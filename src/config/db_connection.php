@@ -1,5 +1,5 @@
 <?php
-    $hostname="18.204.198.161/db";
+    $hostname="52.23.206.178";
     $username="user";
     $password="password";
     $database="cloud_computing";
