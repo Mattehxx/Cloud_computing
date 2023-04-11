@@ -35,9 +35,21 @@ services:
       dockerfile: Dockerfile
     volumes:
       - "./:/var/www/html"
+    networks:
+      - cloud_computing
+
+  nginx:
+    image: fsouza/docker-ssl-proxy
+    restart: always
     ports:
-     - 80:80
-     - 443:443
+      - 443:443
+    environment:
+      DOMAIN: ec2-44-202-149-101.compute-1.amazonaws.com
+      TARGET_PORT: 80
+      TARGET_HOST: www
+      SSL_PORT: 443
+    volumes:
+      - "./certs"
     networks:
       - cloud_computing
 

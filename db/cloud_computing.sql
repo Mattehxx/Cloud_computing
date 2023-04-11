@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db:3306
--- Creato il: Apr 07, 2023 alle 09:30
+-- Creato il: Apr 11, 2023 alle 19:47
 -- Versione del server: 8.0.32
 -- Versione PHP: 8.1.17
 
@@ -45,7 +45,9 @@ INSERT INTO `accounts` (`id`, `username`, `password`, `first_name`, `last_name`,
 (1, 'Mattehxx', '$2y$10$UOAG8hK1WRgEuE.e8sr/ZOfc.UpP33Lc05DCRAgY/pPHb7LjLo2HS', 'Matteo', 'Rovellini', '2004-04-11', 1),
 (2, 'Pytaoffi', '$2y$10$MlsjkqFB0QmPxnVsfFhPbOzkU0kQHqytx6uKyyjGmELpEzyA0b/dW', 'Federico', 'Petrera', '2023-03-01', 1),
 (3, 'Forno', '$2y$10$nwUaSErIU.kbEYkq4fuAVecUVnN9sLapdyTuuZtt1YzuZGs8c060S', 'Simone', 'Fornoni', '2022-11-15', 3),
-(4, 'Aelio', '$2y$10$zLYvAhR5Da7UeFTMjiUMMeyFioabYpcHRk7fo2h5UpXcung552nye', 'Elio', 'Aliaj', '2004-10-31', 1);
+(4, 'Aelio', '$2y$10$zLYvAhR5Da7UeFTMjiUMMeyFioabYpcHRk7fo2h5UpXcung552nye', 'Elio', 'Aliaj', '2004-10-31', 1),
+(20, 'ilPreve', '$2y$10$mc9HgNWldAjngUnyZ6bupurVy1H3VcLVFNohO1bF/icPz39r7URX6', 'Daniele', 'Prevedello', '1986-06-15', 1),
+(21, 'RubyRubacuori', '$2y$10$di0qY.5gBOUZ5IZk/XU1K.BcN9FUiXDPcybw4sWJEBvVAchMLSpmC', 'Ruben', 'Scopacasa', '2023-04-01', 1);
 
 -- --------------------------------------------------------
 
@@ -93,7 +95,7 @@ ALTER TABLE `gender`
 -- AUTO_INCREMENT per la tabella `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT per la tabella `gender`
